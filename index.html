@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VP's Blog</title>
+    <script>
+        function sleep(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+
+        async function go(url) {
+            await sleep(300)
+            window.open(url)
+        }
+
+        function changeTheme(cb) {
+            if (!cb.checked) {
+                document.body.style.backgroundColor = "rgb(20, 20, 87)"
+                document.body.style.color = "white"
+            }else {
+                document.body.style.backgroundColor = "white"
+                document.body.style.color = "rgb(20, 20, 87)"
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p id="vuvu">Light mode(if you want to burn your eyes)</p>
+    <input type="checkbox" onchange="changeTheme(this)" id="switch" ><label id="cu" for="switch">Toggle</label>
+    <hr>
+    <p>Icon by <a href="https://icons8.com">icons8</a></p><br><br>
+    
+    <h1>Hello you!</h1>
+
+    <p>I'm a dumb student live and born in VietNam. I like to code.</p>
+
+    <button onclick="go('https://www.youtube.com/channel/UC2ab6Axxtyf0fKX4T4TlB5A')" >
+        <img src="youtube.png" title="My Youtube channel" width="50px">
+    </button>
+
+    <button onclick="go('https://vp-cume.itch.io')">
+        <img src="itch.png" title="My Itch" width="50px">
+    </button>
+
+    <button onclick="go('https://patrick518.newgrounds.com/')">
+        <img src="newgrounds.png" title="My Newgrounds" width="60px">
+    </button>
+
+    <button onclick="go('https://twitter.com/VPvuive')">
+        <img src="twitter.png" title="My Twitter" width="50px">
+    </button><br>
+	<a href="https://minedark909.github.io/free-pico">Free Pico Park</a>
+</body>
+</html>
